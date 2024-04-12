@@ -1,0 +1,200 @@
+body{
+    font-family: sans-serif;
+    width: 90%;
+    margin: 10px auto;
+}
+
+/* ################# START HEADER ################## */
+header{
+    display: flex;
+    justify-content: space-between;
+    grid-column-start: 2;
+    margin: 10px 5px 10px 5px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+header ul li{
+    margin: 0 10px 0 10px;
+}
+header ul li a{
+    text-decoration: none;
+    color: black;
+}
+header ul li a:hover{
+    color: red;
+}
+/* ################# END HEADER ################## */
+
+
+/* ################# START HOME ################## */
+.upper-section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+}
+.home{
+    width: 100%;
+}
+.home .content{
+    display: flex;
+}
+.home img{
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100%;
+}
+.home h1{
+    margin-top: 10px;
+    font-size: xxx-large;
+    font-weight: bold;
+    width: 50%;
+}
+.home .sidetext{
+    width: 50%;
+    margin-left: 10px;
+}
+.home .sidetext p{
+    color: #636363;
+}
+.home .sidetext button{
+    border: 0;
+    background-color: #10041c;
+    color: white;
+    width: 120px;
+    height: 35px;
+}
+/* ################# END HOME ################## */
+
+/* ################# START NEW ################## */
+.new{
+    background-color: #10041c;
+    width: 100%;
+}
+.new .topics{
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.new .topics h2{
+    color: #ffbf00;
+    font-size: xx-large;
+}
+.new h3:hover{
+    color: #ffbf00;
+    cursor: pointer;
+}
+/* LEARNED: how to size the hr */
+.new .topics hr{
+    background-color: #c5c5c5;
+    border: none;
+    height: 0.2px;
+    width: 100%;
+}
+.new .topics .topic p{
+    color: #c5c5c5;
+}
+
+/* ################# END NEW ################## */
+
+/* ################# START TREND ################## */
+.trend{
+    display: flex;
+    margin-top: 20px;
+}
+.trend .topic{
+    display: flex;
+    height: 120px;
+    width: 340px;
+    margin: 0 15px 0 15px;
+}
+.trend .topic .content{
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+.trend .content b{
+    font-size: xx-large;
+    color: gray;
+}
+.trend .content h2{
+    margin: 5px auto;
+}
+.trend h2:hover{
+    color: #ffbf00;
+    cursor: pointer;
+}
+.trend .content p{
+    color: gray;
+}
+/* ################# END TREND ################## */
+
+/* ################# START MEDIA ################## */
+/* MOBILE */
+@media(max-width:320px){
+    body{
+        margin-bottom: 44px;
+    }
+    nav{
+        display: none;
+    }
+    main{
+        margin: 20px auto;
+    }
+    .home .content{
+        display: block;
+    }
+    .home h1{
+        width: 100%;
+    }
+    .home .sidetext{
+        width: 100%;
+    }
+    .new{
+        margin-top: 10px;
+    }
+    .upper-section{
+        display: block;
+    }
+    .trend{
+        flex-direction: column;
+    }
+    .trend .topic{
+        margin: 10px 0 10px 0;
+        width: 277px;
+    }
+    .trend .content h2{
+        font-size: 1em;
+    }
+/* SMALL LAPTOPS */
+}
+@media(max-width:960px){
+    .upper-section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* TABLETS */
+@media (min-width:321px) and (max-width:768px){
+    body{
+        width: 96%;
+    }
+    .home .content{
+        display: block;
+    }
+    .home .content h1{
+        width: 100%;
+    }
+    .home .sidetext{
+        width: 100%;
+    }
+    .trend{
+        flex-wrap: wrap;
+    }
+    .trend .topic{
+        width: 50%;
+        margin: 0;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+}
